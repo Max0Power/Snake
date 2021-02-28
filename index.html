@@ -1,0 +1,44 @@
+<!--
+  * @author Jussi Parviainen
+  * @created 23.2.2021
+ -->
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		
+		<!-- Sivun otsikko -->
+		<title>Snake Game</title>
+		
+		<!-- Sivun kuvake -->
+		<link rel="shortcut icon" type="image/png" href="assets/sprites/GameLogo.png"/>
+		
+		<!-- Phaser Libary: -->
+		<script type="text/javascript" src="phaser.min.js"></script> <!-- Phaser -->
+		
+		<!-- Prefabs -->
+		<script type="text/javascript" src="js/prefabs/snake.js"></script> <!-- Käärme on tehty Prefabina, jonka voi lisätä mihinn tahansa sceneen -->
+
+		<!-- Scenes, Pelissä olevat scenet -->
+		<script type="text/javascript" src="js/scenes/preload.js"></script> <!-- Lataa kaikki assetit käyttöön kerralla, latausta ei tehdä muissa sceneissä -->
+		<script type="text/javascript" src="js/scenes/main_menu.js"></script> <!-- Pelin päävalikon scene, avataan ensimmäisenä -->
+		<script type="text/javascript" src="js/scenes/level1.js"></script> <!-- Level1, "peli" scene -->
+		<script type="text/javascript" src="js/scenes/death_screen.js"></script> <!-- Pelaajan kuoleman jälkeen esitettävä "Death Screen", toimii ns. päävalikkona ekan pelikerran jälkeen -->
+
+		<!-- Game Booting, vastaa pelin käynnistymisestä -->
+		<script type="text/javascript" src="js/game.js"></script>
+		
+		<!-- Tällä estetään scroll -palkin ilmestyminen sivuun: -->
+		<style>
+			html,
+			body {
+			  margin: 0px;
+			  padding: 0px;
+			  overflow: hidden;
+			  height: 100%;
+			  background-color: black;
+			}
+		</style>
+	</head>
+	<body></body>
+</html>
